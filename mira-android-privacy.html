@@ -1,0 +1,283 @@
+<title>Mira Privacy Policy</title>
+<meta name="description" content="Privacy policy for Mira — a fully on-device wellness mirror by Xiaoxiao Shen LLC. Your photo is analyzed on your device and discarded; nothing is uploaded or collected.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --ground:      #FBFAFF;
+    --surface:     #FFFFFF;
+    --ink:         #2A2340;
+    --muted:       #736D87;
+    --faint:       #E7E3F2;
+    --accent:      #6D5FE6;
+    --accent-soft: #EFECFC;
+    --ring:        #C9C1EF;
+    --good:        #3E9C7A;
+    --shadow:      0 1px 2px rgba(42,35,64,.05), 0 8px 30px rgba(90,74,200,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground:      #141020;
+      --surface:     #1C1730;
+      --ink:         #ECE9F8;
+      --muted:       #A9A2C4;
+      --faint:       #2C2545;
+      --accent:      #A99BFF;
+      --accent-soft: #241E3D;
+      --ring:        #4A3F73;
+      --good:        #6FD3AC;
+      --shadow:      0 1px 2px rgba(0,0,0,.3), 0 10px 34px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="light"] {
+    --ground:#FBFAFF; --surface:#FFFFFF; --ink:#2A2340; --muted:#736D87;
+    --faint:#E7E3F2; --accent:#6D5FE6; --accent-soft:#EFECFC; --ring:#C9C1EF;
+    --good:#3E9C7A; --shadow:0 1px 2px rgba(42,35,64,.05), 0 8px 30px rgba(90,74,200,.06);
+  }
+  :root[data-theme="dark"] {
+    --ground:#141020; --surface:#1C1730; --ink:#ECE9F8; --muted:#A9A2C4;
+    --faint:#2C2545; --accent:#A99BFF; --accent-soft:#241E3D; --ring:#4A3F73;
+    --good:#6FD3AC; --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 34px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .wrap {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 5vw, 2rem) 5rem;
+  }
+
+  /* ---- masthead: a quiet mirror motif, not a hero ---- */
+  header { text-align: center; }
+  .disc {
+    width: 60px; height: 60px; margin: 0 auto 1.4rem;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 38% 34%, rgba(255,255,255,.55), transparent 46%),
+      linear-gradient(160deg, var(--accent), color-mix(in oklab, var(--accent) 55%, #d7b8ff));
+    box-shadow: 0 0 0 5px var(--surface), 0 0 0 6px var(--ring), var(--shadow);
+    position: relative;
+  }
+  .disc::after {
+    content: ""; position: absolute; inset: 0; border-radius: 50%;
+    box-shadow: inset 0 -6px 14px rgba(40,20,80,.22);
+  }
+  .brand {
+    font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--muted); font-weight: 600; margin: 0 0 .5rem;
+  }
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 6vw, 2.6rem);
+    line-height: 1.12;
+    letter-spacing: -.01em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .dates {
+    margin-top: .9rem; color: var(--muted);
+    font-size: .82rem; letter-spacing: .01em;
+  }
+  .dates b { color: var(--ink); font-weight: 600; }
+
+  /* ---- at-a-glance: the three facts people want to verify ---- */
+  .facts {
+    list-style: none; margin: 2.4rem 0 0; padding: 0;
+    display: grid; gap: .75rem;
+  }
+  @media (min-width: 34rem) {
+    .facts { grid-template-columns: repeat(3, 1fr); }
+  }
+  .facts li {
+    background: var(--surface);
+    border: 1px solid var(--faint);
+    border-radius: 14px;
+    padding: 1rem 1.05rem;
+    box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: .3rem;
+  }
+  .facts .k {
+    font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 700;
+  }
+  .facts .v { font-size: .95rem; line-height: 1.45; color: var(--ink); }
+
+  /* ---- lede ---- */
+  .lede {
+    margin: 2.6rem 0 0;
+    font-size: 1.12rem; line-height: 1.65;
+    color: var(--ink);
+  }
+
+  /* ---- body sections ---- */
+  main { margin-top: 2.6rem; }
+  section + section { margin-top: 2.4rem; }
+  section { padding-top: 2.4rem; border-top: 1px solid var(--faint); }
+  section:first-of-type { border-top: 0; padding-top: 0; }
+  h2 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+    font-weight: 600;
+    font-size: 1.32rem;
+    letter-spacing: -.005em;
+    margin: 0 0 .7rem;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  p { margin: 0 0 1rem; color: color-mix(in oklab, var(--ink) 92%, var(--muted)); }
+  p:last-child { margin-bottom: 0; }
+  a {
+    color: var(--accent); font-weight: 600;
+    text-decoration: underline; text-underline-offset: 2px;
+    text-decoration-color: var(--ring);
+  }
+  a:hover { text-decoration-color: var(--accent); }
+  a:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px;
+  }
+
+  .callout {
+    margin-top: 1.1rem;
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in oklab, var(--accent) 22%, transparent);
+    border-radius: 12px;
+    padding: .9rem 1.05rem;
+    font-size: .95rem;
+    color: color-mix(in oklab, var(--ink) 88%, var(--accent));
+  }
+
+  footer {
+    margin-top: 3.5rem; padding-top: 1.6rem;
+    border-top: 1px solid var(--faint);
+    color: var(--muted); font-size: .82rem;
+    display: flex; flex-wrap: wrap; gap: .35rem .9rem; align-items: baseline;
+    justify-content: space-between;
+  }
+  footer .who { font-weight: 600; color: var(--ink); }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="disc" aria-hidden="true"></div>
+    <p class="brand">Mira</p>
+    <h1>Privacy Policy</h1>
+    <p class="dates">
+      <b>Last updated</b> July 9, 2026 &nbsp;·&nbsp; <b>Effective</b> July 9, 2026
+    </p>
+
+    <ul class="facts">
+      <li>
+        <span class="k">On device</span>
+        <span class="v">Your photo is analyzed right on your phone.</span>
+      </li>
+      <li>
+        <span class="k">Then discarded</span>
+        <span class="v">The photo is never saved, uploaded, or collected.</span>
+      </li>
+      <li>
+        <span class="k">Stays yours</span>
+        <span class="v">Scores &amp; history live only in the app, on your device.</span>
+      </li>
+    </ul>
+  </header>
+
+  <p class="lede">
+    Your privacy comes first. Mira analyzes your photo on your device and then
+    discards it, and your information stays on your device. This policy describes
+    what information Mira processes and your choices. Mira is provided by
+    Xiaoxiao&nbsp;Shen&nbsp;LLC. We do not sell your personal information, and we do
+    not use it for advertising. We apply reasonable safeguards to protect the
+    information that stays on your device.
+  </p>
+
+  <main>
+    <section>
+      <h2>Information We Process</h2>
+      <p>
+        When you take a selfie, it is analyzed on your device to compute your
+        wellness scores and a short summary. The photo is then discarded. Your
+        photo is not uploaded, stored, or collected.
+      </p>
+      <p>
+        Your scores, summaries, and history are kept only in the app on your
+        device. Mira does not use a cloud service, keeps no account, and sends
+        nothing off your device.
+      </p>
+    </section>
+
+    <section>
+      <h2>How We Use Information</h2>
+      <p>
+        We use the information kept on your device to provide and maintain the app,
+        to show your wellness history and trends on your device, and to comply with
+        applicable law. We do not train or improve any model using your data. We do
+        not share your information with advertisers or use it for third-party
+        advertising.
+      </p>
+    </section>
+
+    <section>
+      <h2>Data Retention and Your Choices</h2>
+      <p>
+        Information kept on your device remains until you delete it in the app or
+        remove the app. You can view and delete your wellness records in the app at
+        any time.
+      </p>
+      <p class="callout">
+        Because the app keeps no account and sends nothing off your device, there is
+        no remote copy of your information for us to hold or to delete on your behalf
+        — deletion is always in your hands, in the app.
+      </p>
+    </section>
+
+    <section>
+      <h2>Not a Medical Device</h2>
+      <p>
+        Mira offers gentle, everyday wellness reflections. It is not a medical
+        device and does not diagnose. It is never a substitute for the advice of a
+        doctor or qualified health professional.
+      </p>
+    </section>
+
+    <section>
+      <h2>Children</h2>
+      <p>
+        Mira is intended for a general audience and is not directed to children
+        under 13. Because Mira collects nothing from your device, it does not
+        knowingly gather information from anyone, including children.
+      </p>
+    </section>
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>
+        We may update this policy from time to time. When appropriate, we will
+        update the effective date above and provide notice as required by applicable
+        law.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        If you have questions about this policy, please contact Xiaoxiao Shen LLC at
+        <a href="mailto:xiaoxioashenllc@gmail.com">xiaoxioashenllc@gmail.com</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <span class="who">Xiaoxiao Shen LLC</span>
+    <span>Mira · fully on-device wellness</span>
+  </footer>
+</div>
