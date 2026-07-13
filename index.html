@@ -90,6 +90,15 @@
   strong { font-weight: 650; }
   a { color: var(--accent); }
 
+  .note {
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 24%, transparent);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 0 0 14px;
+  }
+  .note p:last-child { margin-bottom: 0; }
+
   .divider { height: 1px; background: var(--line); border: 0; margin: 30px 0; }
 
   footer {
@@ -103,36 +112,56 @@
   <header>
     <div class="logo" aria-hidden="true">🪞</div>
     <h1>Mira Privacy Policy</h1>
-    <p class="updated">Last updated: July 9, 2026 &nbsp;·&nbsp; Effective: July 9, 2026</p>
+    <p class="updated">Last updated: July 12, 2026 &nbsp;·&nbsp; Effective: July 12, 2026</p>
   </header>
 
   <div class="headline">
-    <p><strong>Your privacy comes first.</strong> Mira analyzes your photo on your device and then discards it, and by default your information stays on your device. This policy describes what information Mira processes and your choices. Mira is provided by <strong>Xiaoxiao Shen LLC</strong>. We do not sell your personal information, and we do not use it for advertising. We apply reasonable safeguards to protect your information.</p>
+    <p><strong>Your privacy comes first.</strong> Mira analyzes your photo on your device and then discards it, and your wellness records stay on your device. Mira is provided by <strong>Xiaoxiao Shen LLC</strong>. We do not sell your personal information, we do not use it for advertising, and we do not use it to train any model. We apply reasonable safeguards to protect your information.</p>
   </div>
 
   <main class="card">
-    <h2>Information We Process</h2>
-    <p>Your selfie is analyzed on your device to compute your wellness scores and a short summary, and the photo is then discarded. Your photo is not uploaded, stored, or collected.</p>
-    <p>By default, your scores, summaries, and history are kept only in the app on your device. If you turn on the optional cloud backup, only de-identified wellness values (your scores, summaries, session dates, and skin observations, never a photo) are stored so you can restore your own history, tied only to a random ID that is not linked to your name, email, or real-world identity.</p>
+    <h2>Your Photo</h2>
+    <p>Your selfie is analyzed on your device to compute your wellness scores and a short summary. The photo is then discarded. It is never uploaded, never stored, and never used to identify you.</p>
+
+    <h2>Your Records Stay on Your Phone</h2>
+    <p>Your scores, summaries, session dates and skin observations are stored only on your device. There is no cloud copy, no server copy, and no account. We cannot show you your history, export it for you, or recover it for you, because we never receive it.</p>
+    <p>Because your history matters, Mira keeps it safe in three places on your own phone: the app's storage, a file inside the app's private folder, and the device Keychain. This means:</p>
+    <ul>
+      <li>when you update Mira to a new version, your history is kept; and</li>
+      <li>if you delete Mira and reinstall it, your history comes back on its own.</li>
+    </ul>
+    <p>Moving to a <strong>new phone</strong> is the one case your phone cannot cover by itself, because nothing from the old phone exists on the new one. For that, use <strong>Back up &amp; restore</strong> in the app: save a backup file wherever you like (Files, iCloud Drive, or anywhere else you choose) and open it on your new phone. The file contains only numbers and short text — never a photo. Where you keep that file is your choice, and it is then covered by whatever service you save it to.</p>
+
+    <h2>Deleting Your Data</h2>
+    <p>You can view and delete your records in the app at any time.</p>
+    <div class="note">
+      <p>Please note: because your history is kept in the device Keychain so that a reinstall can restore it, <strong>deleting the app does not erase your history</strong> — reinstalling Mira would bring it back. If you want it gone for good, for example before you sell or hand on your phone, open the app and use <strong>Erase everything on this phone</strong> under System → Back up &amp; restore. That erases all three on-device copies, including the Keychain one, and cannot be undone.</p>
+    </div>
+
+    <h2>Anonymous Usage (You Can Turn This Off)</h2>
+    <p>The only information Mira ever sends is anonymous usage and performance data: which screens were opened, which buttons were tapped, how long a screen was on view, the app version and platform, how long an analysis took, and crashes. We use it to see what is slow or broken so that we can fix it.</p>
+    <p>This <strong>never</strong> includes your wellness scores, your summaries, your skin observations, the names you type for family members, or your photo. Those never leave your device at all. The usage data is tied only to a random identifier that is not linked to your name, email, or real-world identity, and it is sent to our own server — never to an advertising network, a data broker, or a third-party analytics company. We do not track you across other apps or websites.</p>
+    <p>You can turn this off at any time in the app, under the gear menu → Anonymous usage. When it is off, Mira sends nothing at all.</p>
 
     <h2>How We Use Information</h2>
-    <p>We use information to provide and maintain the app, to show your wellness history and trends, to restore your history if you have turned on cloud backup, and to comply with applicable law. We do not train or improve any model using your data. We do not share your information with advertisers or use it for third-party advertising.</p>
+    <p>We use the anonymous usage data described above to maintain and improve the app, and to comply with applicable law. We do not train or improve any model using your data. We do not share your information with advertisers, and we do not sell it.</p>
 
-    <h2>Data Retention and Your Choices</h2>
-    <p>Information kept on your device remains until you delete it in the app or remove the app. If you turn on cloud backup, we retain those de-identified values until you turn backup off or ask us to delete them. You can view and delete your wellness records in the app, and you may contact us to request deletion of information associated with your random ID.</p>
+    <h2>Children</h2>
+    <p>Mira is not directed to children under 13, and we do not knowingly collect personal information from them.</p>
 
     <h2>Not a Medical Device</h2>
     <p>Mira offers gentle, everyday wellness reflections. It is not a medical device and does not diagnose. It is never a substitute for a doctor.</p>
 
-    <h2>Changes to This Policy</h2>
-    <p>We may update this policy from time to time. When appropriate, we will update the effective date and provide notice as required by applicable law.</p>
+    <h2>Changes to This Notice</h2>
+    <p>We may update this notice from time to time. When appropriate, we will update the effective date and provide notice as required by applicable law.</p>
 
     <h2>Contact</h2>
-    <p>If you have questions about this policy, please contact Xiaoxiao Shen LLC at <a href="mailto:xiaoxioashenllc@gmail.com">xiaoxioashenllc@gmail.com</a>.</p>
+    <p>If you have questions about this notice, contact Xiaoxiao Shen LLC at <a href="mailto:xiaoxioashenllc@gmail.com">xiaoxioashenllc@gmail.com</a>.</p>
   </main>
 
   <footer>
     <p>Mira is provided by Xiaoxiao Shen LLC. This app is not a medical device and does not diagnose.</p>
+    <p><a href="support.html">Support &amp; FAQ</a></p>
   </footer>
 </div>
 </body>

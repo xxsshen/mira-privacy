@@ -1,128 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mira Support</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                         Helvetica, Arial, sans-serif;
-            background: #f7f8fc;
-            color: #333;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mira Support</title>
+<style>
+  :root {
+    --bg: #F6F4FA;
+    --card: #FFFFFF;
+    --ink: #2A2740;
+    --muted: #6E6A85;
+    --accent: #6C5CE7;
+    --accent-soft: #EFECFC;
+    --line: #E7E3F2;
+    --good: #1F9D6B;
+    --good-soft: #E6F5EE;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16141F;
+      --card: #201D2C;
+      --ink: #ECEAF5;
+      --muted: #A6A1BC;
+      --accent: #A79BFF;
+      --accent-soft: #2A2740;
+      --line: #302B40;
+      --good: #5FD3A3;
+      --good-soft: #1E3A30;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16141F; --card: #201D2C; --ink: #ECEAF5; --muted: #A6A1BC;
+    --accent: #A79BFF; --accent-soft: #2A2740; --line: #302B40;
+    --good: #5FD3A3; --good-soft: #1E3A30;
+  }
+  :root[data-theme="light"] {
+    --bg: #F6F4FA; --card: #FFFFFF; --ink: #2A2740; --muted: #6E6A85;
+    --accent: #6C5CE7; --accent-soft: #EFECFC; --line: #E7E3F2;
+    --good: #1F9D6B; --good-soft: #E6F5EE;
+  }
 
-        .container {
-            max-width: 700px;
-            margin: 60px auto;
-            padding: 40px;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0,0,0,.08);
-        }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 40px 20px 80px;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
 
-        h1 {
-            margin-top: 0;
-            color: #4f46e5;
-            font-size: 2rem;
-        }
+  header { text-align: center; margin-bottom: 34px; }
+  .logo {
+    width: 66px; height: 66px; border-radius: 20px;
+    background: var(--accent-soft);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 34px; margin-bottom: 16px;
+  }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.02em; text-wrap: balance; }
+  .updated { color: var(--muted); font-size: 14px; margin: 0; }
 
-        h2 {
-            margin-top: 32px;
-            color: #444;
-        }
+  .headline {
+    background: var(--good-soft);
+    border: 1px solid color-mix(in srgb, var(--good) 30%, transparent);
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin: 0 0 30px;
+  }
+  .headline p { margin: 0 0 12px; font-size: 17px; }
+  .headline p:last-child { margin-bottom: 0; }
+  .headline strong { color: var(--good); }
 
-        p {
-            line-height: 1.7;
-            color: #555;
-        }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 26px 28px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .card + .card { margin-top: 22px; }
 
-        .email {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 12px 20px;
-            background: #4f46e5;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-        }
+  h2 {
+    font-size: 15px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--accent); margin: 34px 0 10px;
+  }
+  h2:first-of-type { margin-top: 4px; }
+  h3 {
+    font-size: 17px; font-weight: 650; margin: 0 0 6px;
+    letter-spacing: -0.01em; color: var(--ink);
+  }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin: 0 0 8px; }
+  strong { font-weight: 650; }
+  a { color: var(--accent); }
 
-        .email:hover {
-            background: #4338ca;
-        }
+  .qa { padding: 18px 0; border-top: 1px solid var(--line); }
+  .qa:first-of-type { padding-top: 4px; border-top: 0; }
+  .qa p:last-child { margin-bottom: 0; }
 
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            color: #888;
-            font-size: 14px;
-        }
+  .note {
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 24%, transparent);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 12px 0 0;
+  }
+  .note p:last-child { margin-bottom: 0; }
 
-        .card {
-            background: #f5f7ff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
+  .divider { height: 1px; background: var(--line); border: 0; margin: 30px 0; }
 
-        ul {
-            line-height: 1.8;
-            color: #555;
-        }
-    </style>
+  footer {
+    text-align: center; color: var(--muted); font-size: 14px; margin-top: 32px;
+  }
+  footer a { color: var(--muted); text-decoration: underline; }
+</style>
 </head>
-
 <body>
+<div class="wrap">
+  <header>
+    <div class="logo" aria-hidden="true">🪞</div>
+    <h1>Mira Support</h1>
+    <p class="updated">Effective: July 12, 2026</p>
+  </header>
 
-<div class="container">
+  <div class="headline">
+    <p><strong>Mira is a gentle wellness mirror.</strong> You take a selfie, and Mira reflects back three everyday scores — Mood, Vitality and Rest — with a short, kind summary.</p>
+    <p>Mira is not a medical device. It does not diagnose, and it is never a substitute for a doctor.</p>
+  </div>
 
-<h1>Mira Support</h1>
+  <main class="card">
+    <h2>Frequently asked questions</h2>
 
-<p>
-Thank you for using Mira.
-We're here to help with any questions, feedback, or technical issues you may have.
-</p>
+    <div class="qa">
+      <h3>Where is my data kept?</h3>
+      <p>On your phone only. Your scores, summaries, session dates and skin observations are stored on your device. There is no cloud copy, no server copy, and no account. We never receive your records, so we cannot show them to you, export them for you, or recover them for you.</p>
+    </div>
 
-<div class="card">
-<h2>Contact Support</h2>
+    <div class="qa">
+      <h3>Will I lose my history if I update the app?</h3>
+      <p>No. When you update Mira to a new version, your history is kept.</p>
+    </div>
 
-<p>
-If you need assistance, please contact us by email:
-</p>
+    <div class="qa">
+      <h3>What if I delete Mira and reinstall it?</h3>
+      <p>Your history comes back on its own. Mira keeps it in three places on your own phone — the app's storage, a file inside the app's private folder, and the device Keychain — so a reinstall restores it automatically.</p>
+    </div>
 
-<a class="email" href="mailto:xiaoxiaoshenllc@gmail.com">
-xiaoxiaoshenllc@gmail.com
-</a>
+    <div class="qa">
+      <h3>How do I move to a new phone?</h3>
+      <p>Use <strong>Back up &amp; restore</strong> in the app. Save a backup file wherever you like (Files, iCloud Drive, or anywhere else you choose), then open that file on your new phone. This is the one case your phone cannot cover by itself, because nothing from the old phone exists on the new one. The file contains only numbers and short text — never a photo. Where you keep it is your choice.</p>
+    </div>
 
-<p>
-We will do our best to respond as soon as reasonably possible.
-</p>
+    <div class="qa">
+      <h3>How do I erase everything for good?</h3>
+      <p>Open the app and go to <strong>System → Back up &amp; restore → Erase everything on this phone</strong>. That erases all three on-device copies, including the Keychain one, and cannot be undone.</p>
+      <div class="note">
+        <p>Please note: simply <strong>deleting the app does not erase your history</strong>. It is kept in the device Keychain so that a reinstall can restore it, which means reinstalling Mira would bring it back. Use <strong>Erase everything on this phone</strong> before you sell or hand on your phone.</p>
+      </div>
+    </div>
+
+    <div class="qa">
+      <h3>Is my photo uploaded?</h3>
+      <p>No. Your selfie is analyzed on your device to compute your scores and summary, and the photo is then discarded. It is never uploaded, never stored, and never used to identify you.</p>
+    </div>
+
+    <div class="qa">
+      <h3>What does Mira send?</h3>
+      <p>The only thing Mira ever sends is anonymous usage and performance data: which screens were opened, which buttons were tapped, how long a screen was on view, the app version and platform, how long an analysis took, and crashes. It helps us see what is slow or broken so we can fix it.</p>
+      <p>It never includes your scores, your summaries, your skin observations, the names you type for family members, or your photo. It is tied only to a random identifier and goes to our own server — never to an advertising network, a data broker, or a third-party analytics company.</p>
+      <p>You can switch it off at any time under the gear menu → <strong>Anonymous usage</strong>. When it is off, Mira sends nothing at all.</p>
+    </div>
+
+    <div class="qa">
+      <h3>Is this a medical device?</h3>
+      <p>No. Mira offers gentle, everyday wellness reflections. It is not a medical device and does not diagnose. It is never a substitute for a doctor. If something about your health concerns you, please talk to a doctor.</p>
+    </div>
+  </main>
+
+  <div class="card">
+    <h2>Contact us</h2>
+    <p>If you have a question, hit a problem, or want to tell us something, email us at <a href="mailto:xiaoxioashenllc@gmail.com">xiaoxioashenllc@gmail.com</a>.</p>
+    <p>We read every message and aim to respond within a few business days. It helps if you tell us your device and your app version, which you can find under the gear menu.</p>
+    <p>Please do not send photos or personal health details — we do not need them, and Mira is built so that we never see them.</p>
+  </div>
+
+  <div class="card">
+    <h2>Privacy</h2>
+    <p>Our full privacy policy explains exactly what stays on your phone and what is sent: <a href="index.html">read the Mira Privacy Policy</a>.</p>
+  </div>
+
+  <footer>
+    <p>Xiaoxiao Shen LLC &nbsp;·&nbsp; Effective July 12, 2026</p>
+    <p>Mira is not a medical device and does not diagnose.</p>
+  </footer>
 </div>
-
-<h2>Common Support Topics</h2>
-
-<ul>
-<li>Account and sign-in assistance</li>
-<li>Technical issues or bugs</li>
-<li>Questions about wellness reports</li>
-<li>Privacy and data questions</li>
-<li>Feature requests and feedback</li>
-</ul>
-
-<h2>Privacy</h2>
-
-<p>
-If you have questions regarding your privacy or the handling of your information,
-please contact us using the email above.
-</p>
-
-<footer>
-© 2026 Xiaoxiao Shen LLC. All rights reserved.
-</footer>
-
-</div>
-
 </body>
 </html>
